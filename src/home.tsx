@@ -5,10 +5,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 
 //import Component
-import Headerform from './components/headerform'
-import FormAddTodo from "./components/formAddTodo";
+import Headerform from './components/layout/headerform'
+import FormAddTodo from "./components/todo/formAddTodo";
 import FormTodo from "./form-todo";
-import TodoList from "./components/todoList";
+import TodoList from "./components/todo/todoList";
 
 const Home = (): ReactElement => {
 
