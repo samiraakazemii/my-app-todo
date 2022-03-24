@@ -34,10 +34,10 @@ const [todo,Settodo]=useState<FormTodo[]>([]);
            <FormAddTodo AddTodo={AddTodo}/>
          </div>
        </section>
-       <div className="todosList">
+       <div className="todosList m-5">
            <div className="container">
              <div className="d-flex flex-column align-items-center ">
-               <TodoList todo={todo}/>
+               <TodoList todo={todo} Settodo={Settodo}/>
              </div>
            </div>
         </div>

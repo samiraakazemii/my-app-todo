@@ -3,10 +3,11 @@ import FormTodo from "../form-todo";
 
 interface Props {
  item:FormTodo;
+ DeleteTodo: (x:number) => void;
+ Toggletodo: (x:number) => void;
 
 }
-const Todo  = ({item}: Props): ReactElement=>{
-console.log(item);
+const Todo  = ({item,DeleteTodo,Toggletodo}: Props): ReactElement=>{
 
  return(
   <div className="col-6 mb-2">
@@ -15,9 +16,9 @@ console.log(item);
       {item.text}
     </div>
     <div>
-      <button type="button" className="btn btn-sm mr-1">done/undone</button>
-      <button type="button" className="btn btn-info btn-sm mr-1" >edit</button>
-      <button type="button" className="btn btn-danger btn-sm" >delete</button>
+      <button type="button" className={`btn btn-sm m-1 ${item.done ? 'btn-warning':'btn-success'}`} onClick={()=>Toggletodo(item.key)}>{!item.done ? 'done':'undone'}</button>
+      <button type="button" className="btn btn-info btn-sm m-1" >edit</button>
+      <button type="button" className="btn btn-danger btn-sm m-1" onClick={()=>DeleteTodo(item.key)} >delete</button>
     </div>
   </div>
 </div>
